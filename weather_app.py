@@ -30,18 +30,4 @@ def recursiveFlatten(object):
               weatherFlat[k]=v
     return weatherFlat
 
-weather = recursiveFlatten(getWeather())
 
-string = ""
-string += f"{weather.get('name')} Weather\n"
-string += f"Date: {time.strftime('%m-%d-%Y', time.localtime(weather.get('dt')))}\n"
-string += f"Time: {time.strftime('%H:%M:%S', time.localtime(weather.get('dt')))}\n"
-string += f"Skies: {weather.get('main')}:\n"
-string += f"Current Temp: {weather.get('temp')}°F\n"
-string += f"Humidity: {weather.get('humidity')}%\n"
-string += f"High: {weather.get('temp_max')}°F\n"
-string += f"Low: {weather.get('temp_min')}°F\n"
-string += f"Sunrise: {time.strftime('%H:%M:%S', time.localtime(weather.get('sunrise')))}\n"
-string += f"Sunset: {time.strftime('%H:%M:%S', time.localtime(weather.get('sunset')))}\n"
-
-print(string)
