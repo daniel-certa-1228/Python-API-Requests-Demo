@@ -6,7 +6,7 @@ import os
 weather = weather_app.recursiveFlatten(weather_app.getWeather())
 
 string = ""
-string += f"*{weather.get('name')} Weather*\n"
+string += f"**{weather.get('name')} Weather**\n"
 string += f"Date: {time.strftime('%m-%d-%Y', time.localtime(weather.get('dt')))}\n"
 string += f"Time: {time.strftime('%H:%M', time.localtime(weather.get('dt')))}\n"
 string += f"Skies: {weather.get('main')}\n"
