@@ -1,11 +1,12 @@
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import os
 
-target_email = 'dcerta@oneeightycapital.com'
-email_address = 'nash.wx.python@gmail.com'
-email_password = 'NashWx007!!'
-smpt_address = 'smtp-relay.gmail.com'
+target_email = os.environ.get('MYOECEMAIL')
+email_address = os.environ.get('NASHWXEMAIL')
+email_password = os.environ.get('NASHWXPASSWORD')
+smpt_address = 'smtp.gmail.com'
 smpt_port = 587
 
 def sendMail(messageText):
