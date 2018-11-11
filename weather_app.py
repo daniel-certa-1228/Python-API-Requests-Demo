@@ -29,5 +29,4 @@ def recursiveFlatten(object):
             else: 
               weatherFlat[k]=v
     return weatherFlat
-
-
+    
