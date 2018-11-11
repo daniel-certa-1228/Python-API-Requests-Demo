@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import os
 
 weather = weather_app.recursiveFlatten(weather_app.getWeather())
-utcOffset = timedelta(hours=5)
+utcOffset = timedelta(hours=6)
 
 string = ""
 string += f"**{weather.get('name')} Weather**\n"
